@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 50px;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+header {
+  grid-area: header;
+  border: 2px solid ;
+}
+
+nav{
+  grid-area: nav;
+  border: 2px solid ;
+  display:grid;
+  grid-template-areas:
+    "home products signOut . . ." ;
+}
+
+aside{
+  grid-area: menu;
+  display:none;
+}
+
+main{
+  grid-area: main;
+  border: 2px solid ;
+}
+
+footer{
+  grid-area: footer;
+  border: 2px solid ;
+}
+
+#home{
+  grid-area: home;
+}
+
+#products{
+  grid-area: products;
+}
+
+#signOut{
+  grid-area: signOut;
+  grid-column: -1;
+}
+.wrapper{
+
+    display:grid;
+
+    grid-template-areas:
+    "nav nav nav "
+    "header header header" 
+    "main main main"
+    "footer footer footer";
+  
+    background-color: #eee;
+    padding:20px;
+}
+
+
+
+@media (min-width: 600px) {
+  .wrapper{
+    display:grid;
+    grid-template-areas:
+    'nav nav nav nav nav nav'
+    'header header header header header header'
+    'menu menu main main main main'
+    'menu menu footer footer footer footer';
+    background-color: #eee;
+    padding:20px;
+  }
+
+aside{
+    display:block;
+    border: 2px solid ;
+  }
+}
